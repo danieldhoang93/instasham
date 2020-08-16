@@ -1,0 +1,33 @@
+// app global css in SCSS form
+.textMonoton {
+    font-family: 'Monoton', 'Roboto';
+}
+
+.smallScreen {
+    @media (max-width: $breakpoint-xs-max) {
+        display: block;
+    }
+    @media (min-width: $breakpoint-sm-min) {
+        display: none;
+    }
+}
+
+.largeScreen {
+    @media (max-width: $breakpoint-xs-max) {
+        display: none;
+    }
+    @media (min-width: $breakpoint-sm-min) {
+        display: block;
+    }
+}
+
+.pageWidth {
+    max-width:975px;
+    margin: 0 auto;
+}
+
+.smallerPageWidth {
+    max-width:600px;
+    margin: 0 auto;
+}
+
