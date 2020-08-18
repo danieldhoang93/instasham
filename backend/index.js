@@ -1,5 +1,6 @@
 //dependencies
 const express = require('express');
+const cors = require('cors');
 const admin = require('firebase-admin');
 let inspect = require('util').inspect;
 let Busboy = require('busboy');
@@ -10,7 +11,6 @@ let UUID = require('uuid-v4');
 
 //config - express
 const app = express()
-
 
 //firebase config
 const serviceAccount = require('./serviceAccountKey.json');
@@ -24,6 +24,8 @@ const db = admin.firestore();
 var bucket = admin.storage().bucket();
 
 const port = 3000
+
+app.use(cors())
 
 //POST endpoint
 app.get('/posts', (request, response) => {
