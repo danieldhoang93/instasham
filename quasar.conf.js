@@ -6,7 +6,7 @@
 // Configuration for your app
 // https://quasar.dev/quasar-cli/quasar-conf-js
 let API_LOCAL = 'http://localhost:3000';
-let API_PROD = '';
+let API_PROD = 'https://instasham-backend.herokuapp.com/';
 module.exports = function (/* ctx */) {
   return {
     // https://quasar.dev/quasar-cli/supporting-ts
@@ -46,7 +46,7 @@ module.exports = function (/* ctx */) {
     build: {
       env: {
         //API_LOCAL or API_PROD
-        API: API_LOCAL
+        API: API_PROD
       },
       vueRouterMode: 'hash', // available values: 'hash', 'history'
 
