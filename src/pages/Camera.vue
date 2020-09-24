@@ -13,30 +13,30 @@
       height="240"/>
     </div>
     <div class="text-center">
-      <q-btn :disable="imageTaken" round color="secondary" icon="camera_alt" @click="takePicture"/>
+      <q-btn :disable="imageTaken" flat color="white" icon="camera_alt" @click="takePicture"/>
       <div class="row justify-center q-ma-md">
-        <q-input  v-model="post.caption" label="Caption" class="col" filled dense></q-input>
+        <q-input v-model="post.caption" label="Caption" class="col" filled dense></q-input>
 
-        <q-file outlined v-model="uploadImage" label="Upload" accept="image/*" @input="captureImageFallback">
-          <template v-slot:prepend>
+        <q-file dark filled dense v-model="uploadImage" label="Upload" accept="image/*" @input="captureImageFallback">
+          <template v-slot:append>
             <q-icon name="attach_file" />
           </template>
         </q-file>
       </div>
       <div class="row justify-center q-ma-md">
-        <q-input v-model="post.location" label="Location" class="col" filled dense :loading="locationLoading">
+        <q-input dark v-model="post.location" label="Location" class="col" filled dense :loading="locationLoading">
           <template v-slot:append>
-            <q-btn v-if="!locationLoading" round dense flat icon="place" @click="getLocation"/>
+            <q-btn v-if="!locationLoading" dense flat icon="place" @click="getLocation"/>
           </template>
         </q-input>
       </div>
 
       <div class="row justify-center q-ma-md">
-        <q-input v-model="post.caption" label="Caption" class="col" filled dense/>
+        <q-input dark v-model="post.caption" label="Caption" class="col" filled dense/>
       </div>
       
       <div class="row justify-center q-mt-md">
-        <q-btn rounded color="secondary" label="Post" @click="addPost" :disable="!post.photo"/>
+        <q-btn color="white" label="Post" @click="addPost" :disable="!post.photo" class="text-black"/>
       </div>
     </div>
   </q-page>

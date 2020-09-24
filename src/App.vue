@@ -11,6 +11,6 @@ export default {
 
 <style lang="scss">
 #q-app {
-  background:rgb(243, 243, 243);
+  background:rgb(0, 0, 0)
 }
 </style>

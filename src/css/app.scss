@@ -13,7 +13,7 @@
 }
 
 .largeScreen {
-    @media (max-width: $breakpoint-xs-max) {
+    @media (max-width: $breakpoint-sm-max) {
         display: none;
     }
     @media (min-width: $breakpoint-sm-min) {
@@ -31,3 +31,11 @@
     margin: 0 auto;
 }
 
+.border {
+    border:1px solid rgb(48, 48, 48);
+  }
+  
+.cardBackground{
+background-color:rgb(24, 24, 24);
+}
+  
